@@ -14,6 +14,11 @@ assets/img/            — stock photos, logo.svg
 
 Run locally: `python3 -m http.server 8791` in this folder.
 
+Live: https://oriafiasdev.github.io/palma-studio/ — deployed by GitHub Actions on every push to `main`.
+`npm run build` writes the production site to `dist/`: HTML/CSS/JS minified, the stylesheet inlined,
+Google Fonts self-hosted with the Hebrew subsets preloaded (no font-swap layout shift), absolute
+OG/canonical URLs from `SITE_URL`. Docs (`*.md`) and dotfiles never ship.
+
 ## Mock data — swap these to brand it for a real client
 
 | What | Where it appears | Mock value |

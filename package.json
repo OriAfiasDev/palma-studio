@@ -1,0 +1,12 @@
+{
+  "name": "palma-studio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node .github/scripts/build.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0",
+    "html-minifier-terser": "^7.2.0"
+  }
+}
