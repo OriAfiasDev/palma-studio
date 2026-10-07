@@ -95,9 +95,8 @@ async function selfHostGoogleFonts(href) {
   const res = await fetch(href.replace(/&amp;/g, '&'), { headers: { 'user-agent': UA } });
   if (!res.ok) throw new Error(`Google Fonts CSS ${res.status}`);
   let css = await res.text();
-  // Remember which files carry the Hebrew and basic Latin subsets (digits, Latin
-  // names on the page); they're preloaded below so first paint uses the real font.
-  const hebrew = new Set([...css.matchAll(/\/\*\s*(?:hebrew|latin)\s*\*\/\s*@font-face\s*\{[^}]*?url\((https:\/\/fonts\.gstatic\.com\/[^)]+)\)/g)].map((m) => m[1]));
+  // Remember which files carry the Hebrew subset; they're preloaded below.
+  const hebrew = new Set([...css.matchAll(/\/\*\s*hebrew\s*\*\/\s*@font-face\s*\{[^}]*?url\((https:\/\/fonts\.gstatic\.com\/[^)]+)\)/g)].map((m) => m[1]));
   const preload = [];
   await mkdir(path.join(OUT, 'assets/fonts'), { recursive: true });
   const urls = [...new Set([...css.matchAll(/url\((https:\/\/fonts\.gstatic\.com\/[^)]+)\)/g)].map((m) => m[1]))];
