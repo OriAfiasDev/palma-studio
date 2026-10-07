@@ -3,7 +3,7 @@
 A demo beauty-studio site: Hebrew, fully RTL, plain HTML/CSS/JS with no framework or build step.
 **Everything about the business is fictional**: the name, logo, address, phone number,
 rating, reviews and social links. Photos are free-license stock from Unsplash (see [CREDITS.md](CREDITS.md)).
-The page has `noindex` and a one-line demo notice in the footer, so it won't pass as a real business.
+A one-line demo notice in the footer says so, so it won't pass as a real business.
 
 ```
 index.html
@@ -33,7 +33,7 @@ OG/canonical URLs from `SITE_URL`. Docs (`*.md`) and dotfiles never ship.
 | Google / Waze | generic google.com/maps and waze.com links | — |
 | Logo | `assets/img/logo.svg` (nav, Instagram avatar, favicon) | wine badge + frond |
 
-Before using it for a real business: remove `<meta name="robots" content="noindex">` and the demo
+Before using it for a real business: remove the demo
 notice in `.foot__copy`, and put real reviews in place of the invented ones.
 
 ## Design (shared with the original build)
