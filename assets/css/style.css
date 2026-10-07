@@ -12,6 +12,7 @@
   --rose:  #C1928C;   /* their logo */
   --palm:  #2F5D3A;   /* areca frond */
   --blush: #EFD9D3;   /* nude gel */
+  --wine-dim: #B37683; /* not-yet-read words: still 3.2:1 on paper */
   --wa:    #25D366;
 
   /* type */
@@ -284,8 +285,8 @@ section { position: relative; scroll-margin-block-start: var(--nav-h); }
 }
 .statement__quote { max-width: none; }
 .statement__line { font-family: var(--display); font-weight: 900; font-size: clamp(2.4rem, 7vw, 6.6rem); line-height: 1.05; color: var(--wine); max-width: 9.5em; }
-.js .statement__line span { display: inline-block; opacity: .1; transition: opacity .45s ease; transition-delay: calc(var(--i, 0) * 90ms); }
-.js .statement__line.is-in span { opacity: 1; }
+.js .statement__line span { display: inline-block; color: var(--wine-dim); transition: color .45s ease; transition-delay: calc(var(--i, 0) * 90ms); }
+.js .statement__line.is-in span { color: var(--wine); }
 .statement__by { margin-block-start: var(--s-4); font-size: var(--step--1); letter-spacing: .08em; opacity: .7; }
 .statement__facts {
   margin-block-start: var(--s-5); margin-inline-start: auto; max-width: 34ch;
@@ -513,7 +514,7 @@ section { position: relative; scroll-margin-block-start: var(--nav-h); }
   .hero__photo--a, .hero__photo--b, .hero__frond, .hero__word, .hero__eyebrow, .hero__caption { will-change: auto; }
   .hero__scroll span { animation: none; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
-  .js .statement__line span { opacity: 1; transition: none; }
+  .js .statement__line span { color: var(--wine); transition: none; }
   .frond--drift { animation: none; }
   .services__img { transition: none; }
   .btn, .btn::before, .link-arrow, .work__item img, .insta__item img, .insta__over, .service__name { transition: none; }
@@ -614,7 +615,7 @@ section { position: relative; scroll-margin-block-start: var(--nav-h); }
 .foot__mark {
   flex-basis: 100%; margin: 0 0 var(--s-3);
   font-family: var(--display); font-weight: 900; line-height: .8; letter-spacing: -.03em;
-  font-size: clamp(5rem, 24vw, 22rem); color: var(--wine); text-align: center; direction: ltr;
+  font-size: clamp(5rem, 24vw, 22rem); color: var(--rose); text-align: center; direction: ltr;
 }
 @supports (animation-timeline: view()) {
   .foot__mark { animation: rise linear both; animation-timeline: view(); animation-range: entry 0% cover 45%; }
